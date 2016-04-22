@@ -1,0 +1,215 @@
+@import url(http://fonts.useso.com/css?family=Ubuntu+Mono|Roboto:400,100,300,500,700,300italic|Roboto+Condensed:300,400,700|Roboto+Slab:400,700&subset=latin,latin-ext);
+/*****************************************/
+/************* MAIN SETTINGS *************/
+/*****************************************/
+html,
+body {
+  height: 100%; 
+overflow: scroll;
+}
+
+html {
+  padding-top: 45px;
+  padding-bottom: 0;
+  overflow: scroll;
+}
+  html.mm-opened #wrap > .row #content {
+    position: fixed;
+    left: 0;
+    padding-right: 275px; }
+
+.mm-page {
+  height: 100%;
+  min-height: 100%; }
+
+#wrap {
+ /* overflow: scroll;*/
+  margin: 0;
+  padding: 0 15px;
+  height: 100%;
+  min-height: 100%; }
+  #wrap > .row {
+    height: 100%;
+    min-height: 100%; }
+  #wrap #content {
+    overflow: scroll;
+    padding-bottom: 0;
+    padding-left: 265px;
+    padding-right: 25px;
+    height: 100%;
+    width: 100%; }
+    #wrap #content .main {
+      margin: 10px 0; }
+
+body {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased; }
+  body.modal-open {
+    overflow: auto;
+    background:rgba(146,168,209,.5);
+    margin-right: 0; }
+  body.bg-1 {
+    background-image: url(../images/noise.png), url(../images/1.jpg);
+    background-repeat: repeat, no-repeat;
+    background-position: left top;
+    background-size: auto, cover; }
+  body.bg-2 {
+    background:rgba(146,168,209,.5);
+    background-repeat: repeat, no-repeat;
+    background-position: left top;
+    background-size: auto, cover; }
+  body.bg-3 {
+    background-image: url(../images/noise.png), url(../images/backgrounds/3.jpg);
+    background-repeat: repeat, no-repeat;
+    background-position: left top;
+    background-size: auto, cover; }
+  body.bg-4 {
+    background-image: url(../images/noise.png), url(../images/backgrounds/4.jpg);
+    background-repeat: repeat, no-repeat;
+    background-position: left top;
+    background-size: auto, cover; }
+  body.bg-5 {
+    background-image: url(../images/noise.png), url(../images/backgrounds/5.jpg);
+    background-repeat: repeat, no-repeat;
+    background-position: left top;
+    background-size: auto, cover; }
+  body.bg-6 {
+    background-image: url(../images/noise.png), url(../images/backgrounds/6.jpg);
+    background-repeat: repeat, no-repeat;
+    background-position: left top;
+    background-size: auto, cover; }
+  body.no-bg {
+    background: none; }
+  body .navbar-default {
+    border: 0; }
+  body .mask {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 100000;
+    top: -45px;
+    padding-bottom: 45px;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box; }
+    body .mask #loader {
+      background: url(../images/loader.gif) center center no-repeat;
+      height: 15px;
+      width: 15px;
+      left: 50%;
+      top: 50%;
+      position: absolute;
+      margin: -25px 0 0 -25px; }
+  body > .videocontent {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+    body > .videocontent .video-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+      z-index: 0; }
+      body > .videocontent .video-background video {
+        min-height: 100%;
+        min-width: 100%; }
+    body > .videocontent .ui-video-background {
+      display: none; }
+
+.el-reloader {
+  background: url(../images/loader.gif) center center no-repeat;
+  height: 15px;
+  width: 15px;
+  left: 75%;
+  top: 75%;
+  position: absolute;
+  margin: -25px 0 0 -25px; }
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Roboto Slab", serif;
+  -webkit-font-smoothing: antialiased; }
+  h1.sans-serif, h2.sans-serif, h3.sans-serif, h4.sans-serif, h5.sans-serif, h6.sans-serif, .h1.sans-serif, .h2.sans-serif, .h3.sans-serif, .h4.sans-serif, .h5.sans-serif, .h6.sans-serif {
+    font-family: "Roboto", "Arial", sans-serif; }
+  h1.underline, h2.underline, h3.underline, h4.underline, h5.underline, h6.underline, .h1.underline, .h2.underline, .h3.underline, .h4.underline, .h5.underline, .h6.underline {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 5px; }
+
+*:before,
+*:after {
+  -webkit-transform: translateZ(0); }
+.copyrights{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
+
+/*****************************************/
+/************* Table         *************/
+/*****************************************/
+#container{
+	padding-top:20px;
+	width:960px;
+	margin:0 auto;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+	width:100%;
+	-webkit-box-shadow:  0px 2px 1px 5px rgba(242, 242, 242, 0.1);
+    box-shadow:  0px 2px 1px 5px rgba(242, 242, 242, 0.1);
+}
+
+.zebra {
+    border: 1px solid #555;
+}
+
+.zebra td {
+    border-left: 1px solid #555;
+    border-top: 1px solid #555;
+    padding: 10px;
+    text-align: left;    
+}
+
+.zebra th, .zebra th:hover {
+    border-left: 1px solid #555;
+	border-bottom: 1px solid #828282;
+    padding: 20px;  
+    background-color:#151515 !important;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#151515), to(#404040)) !important;
+    background-image: -webkit-linear-gradient(top, #151515, #404040) !important;
+    background-image:    -moz-linear-gradient(top, #151515, #404040) !important;
+    background-image:     -ms-linear-gradient(top, #151515, #404040) !important;
+    background-image:      -o-linear-gradient(top, #151515, #404040) !important;
+    background-image:         linear-gradient(top, #151515, #404040) !important;
+	color:#fff !important;
+	font-weight:normal;
+}
+
+.zebra tbody tr:nth-child(even) {
+    background: #000 !important;
+	color:#fff;
+}
+
+.zebra tr:hover *{
+    background: #eeeeee;
+	color:#000;
+}
+
+.zebra tr {
+	background:#404040;
+	color:#fff;
+}
+
+
+
+#colorContainer{
+ 
+  /* background-color: #FFDD55;*/
+}
+
+

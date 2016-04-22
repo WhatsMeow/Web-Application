@@ -1,0 +1,66 @@
+<html>  
+ <head>  
+  <title>write demo</title>  
+  </head>  
+ <body>  
+<canvas width="800" height="450"></canvas>  
+<script>  
+ var canvas = document.getElementsByTagName('canvas')[0];  
+ canvas.addEventListener('mousemove', onMouseMove, false);  
+ canvas.addEventListener('mousedown', onMouseDown, false);  
+ canvas.addEventListener('mouseup', onMouseUp, false);  
+  
+ var context = canvas.getContext('2d');  
+ var linex = new Array();  
+ var liney = new Array();  
+ var linen = new Array();  
+  
+ var lastX = -1;  
+ var lastY = -1;  
+ var hue = 0;  
+ var flag = 0;  
+  
+ function onMouseMove(evt) {  
+    if (flag == 1) {  
+       linex.push(evt.layerX);  
+       liney.push(evt.layerY);  
+       linen.push(1);  
+       context.save();  
+       context.translate(context.canvas.width/2, context.canvas.height/2);  
+       context.translate(-context.canvas.width/2, -context.canvas.height/2);  
+       context.beginPath();  
+       context.lineWidth = 5 + Math.random() * 10;  
+  
+       for (var i=1;i<linex.length;i++) {  
+             lastX = linex[i];  
+             lastY = liney[i];  
+             if (linen[i] == 0) {  
+                context.moveTo(lastX,lastY);  
+             } else {  
+                context.lineTo(lastX,lastY);  
+             }  
+       }  
+  
+       hue = hue + 10 * Math.random();  
+       context.strokeStyle = 'hsl(' + hue + ', 50%, 50%)';  
+       context.shadowColor = 'white';  
+       context.shadowBlur = 10;  
+       context.stroke();  
+       context.restore();  
+    }  
+ }  
+ function onMouseDown(evt) {  
+    flag = 1;  
+    linex.push(evt.layerX);  
+    liney.push(evt.layerY);  
+    linen.push(0);  
+ }  
+ function onMouseUp(evt) {  
+    flag = 0;  
+     linex.push(evt.layerX);  
+     liney.push(evt.layerY);  
+    linen.push(0);  
+ }  
+</script>  
+</body>  
+</html> 
