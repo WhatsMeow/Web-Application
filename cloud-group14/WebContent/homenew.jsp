@@ -56,8 +56,8 @@
 				<input class="i9" type="button" value="" /> 
 			</div> 
 			<div class="font" id="font" style="display:inline;margin-right:50px;"> 
-				<input type="button" value="thin" style="width:60px;" /> 
-				<input type="button" value="middle" style="width:60px;" class="grea"/> 
+				<!--  <input type="button" value="thin" style="width:60px;" /> 
+				<input type="button" value="middle" style="width:60px;" class="grea"/> -->
 				<input type="button" value="thick" style="width:60px;"/> 
 			</div>
 			<div style="display:inline;">
@@ -96,7 +96,7 @@
 			this.storageColor="#000000"; 
 			this.eraserRadius=15;
 			this.color=["#000000","#FF0000","#80FF00","#00FFFF","#808080","#FF8000","#408080","#8000FF","#CCCC00"];
-			this.fontWeight=[2,5,8]; 
+			this.fontWeight=[2,5,20]; 
 			this.$=function(id){return typeof id=="string"?document.getElementById(id):id;}; 
 			this.canvas=this.$("canvas"); 
 			if (this.canvas.getContext) { 
@@ -106,7 +106,7 @@
 			} 
 			this.cxt=this.canvas.getContext('2d'); 
 			this.cxt.lineJoin = "round";
-			this.cxt.lineWidth = 5;
+			this.cxt.lineWidth = 20;
 			this.iptClear=this.$("clear"); 
 			this.imgurl=this.$("imgurl");
 			this.w=this.canvas.width;
@@ -267,7 +267,7 @@
 			//save the image to sever
 			getUrl:function() 
 			{ 
-				var image = this.canvas.toDataURL("image/jpg"); 
+				var image = this.canvas.toDataURL("image/png"); 
 				
 				$.ajax({
 					type:"POST",
